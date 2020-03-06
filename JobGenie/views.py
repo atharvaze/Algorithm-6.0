@@ -11,3 +11,6 @@ def base(request):
 
 def home(request):
     return render(request,'home.html',{})
+
+def homepage(request):
+    return render(request,'base.html',{})

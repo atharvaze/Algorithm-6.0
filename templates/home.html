@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="colorlib.com">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet" />
+    
   </head>
 <style>
 html {
@@ -1823,9 +1824,30 @@ span.flatpickr-weekday {
           <div class="input-field fifth-wrap">
             <button class="btn-search" type="button">SEARCH</button>
           </div>
+          
         </div>
+        
       </form>
+      <ul class="list-style" id="result">
+            
+          </ul>
     </div>
 
-  </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
-</html>
+  </body>
+<footer>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+  $("#search").keyup(function(){
+    $("#search").load("templates/skills.txt").toString().split('\n');
+
+  });
+});
+
+    </script>
+
+</footer>
+
+  </html>
