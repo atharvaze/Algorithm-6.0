@@ -12,5 +12,14 @@ def base(request):
 def home(request):
     return render(request,'home.html',{})
 
+@csrf_exempt
+def skillset(request):
+	return render(request,'skillfinder.html',{})
+
 def homepage(request):
     return render(request,'base.html',{})
+
+def skills(request):
+	skillz=request.GET.get('q')
+	print(skillz)
+	return render(request,'skills.html',{'skillz':skillz})
